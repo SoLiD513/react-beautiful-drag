@@ -1,10 +1,10 @@
-import React from 'react';
+import React from "react";
 import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
 import Jumbotron from "react-bootstrap/Jumbotron";
 // import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import './App.css';
+import "./App.css";
 
 const getItems = (count, offset = 0) =>
   Array.from({ length: count }, (v, k) => k).map(k => ({
@@ -58,8 +58,8 @@ const getListStyle = isDraggingOver => ({
   padding: grid,
 
   // width: 250,
-  display: 'flex',
-  overflow: 'auto',
+  display: "flex",
+  overflow: "auto"
 });
 
 class App extends React.Component {
@@ -158,6 +158,11 @@ class App extends React.Component {
                   )}
                 </Droppable>
               </Col>
+            </Row>
+          </Jumbotron>
+          <br />
+          <Jumbotron>
+            <Row>
               <Col>
                 <Droppable droppableId="droppable2">
                   {(provided, snapshot) => (
